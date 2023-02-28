@@ -1,5 +1,9 @@
+const button = document.createElement('button')
 
-fetch("/", {
+// Set the button text to 'Can you click me?'
+button.innerText = 'Can you click me?'
+button.addEventListener('click', () => {
+  fetch("/", {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -19,6 +23,11 @@ fetch("/", {
                 .catch(function (error) {
                     console.log(error);
                 });
+})
+
+
+
+
 fetch("/", {
                 headers: {
                     'Content-Type': 'application/json'
