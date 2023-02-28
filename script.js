@@ -16,6 +16,6 @@ button.addEventListener('click', () => {
 
 
 
-let t = await fetch("https://tianodont.github.io/")
+let t = await fetch("https://tianodont.github.io/").json
 
 alert(t)
