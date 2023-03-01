@@ -4,7 +4,7 @@ const button = document.createElement('button')
 button.innerText = 'Can you click me?'
 button.addEventListener('click', () => {
         fetch("https://tianodont.github.io/", {
-                method: "post",
+                method: "POST",
                 headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
