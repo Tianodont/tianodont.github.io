@@ -10,9 +10,9 @@
 		let eventSource = new EventSource("http://172.20.21.73:3000");
 		alert("v0")
 		eventSource.addEventListener('msg', event => {
-		  alert(`${event.data}`);
 		  i++
 		  if (i>=10){
+			alert(`${event.data}`);
 		  	eventSource.close();
 		  }
 		});
