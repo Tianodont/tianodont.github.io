@@ -8,7 +8,7 @@
 	 <script>
 	 	let i = 0;
 		let eventSource = new EventSource("http://172.20.21.73:3000");
-		alert(i)
+		alert("v0")
 		eventSource.addEventListener('msg', event => {
 		  alert(`${event.data}`);
 		  i++
