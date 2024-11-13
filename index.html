@@ -1,25 +1,130 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Моя тестовая страница</title>
-  </head>
-  <body>
-	 <script>
-	 	let i = 0;
-		let eventSource = new EventSource("http://172.20.21.73:3000");
-		alert("v1")
-		eventSource.addEventListener('msg', event => {
-		  i++
-		  if (i>=10){
-			alert(`${event.data}`);
-		  	eventSource.close();
-		  }
-		});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penetration Tester Job Description</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-		
-	</script>
-  </body>
-  
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #F4F4F4;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        p {
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .expand-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .expand-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .additional-info {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Penetration Tester Job Description</h1>
+</header>
+
+<div class="container">
+    <img src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy80MTQyOTAwL29yaWdpbi5qcGciLCJleHBpcmVzX2F0IjoxNzgyODY0MzA2fQ.iK9Slyo0Wn85toUiZv8lL6zKonXlMlC-YV3jtcUq8PA/img.jpg?width=980&quality=85" alt="Overview of Penetration Testing - Cybersecurity">
+    <h2>Overview</h2>
+    <p>A penetration tester (pentester) is a cybersecurity expert who identifies and analyzes vulnerabilities in an organization’s systems, networks, and applications to prevent potential cyberattacks.</p>
+    
+    
+    <button class="expand-btn" onclick="toggleInfo()">Read More</button>
+
+    <div class="additional-info">
+        <h2>Job Responsibilities</h2>
+        <img src="pentest.png" alt="Job Responsibilities - Cybersecurity Analysis">
+        <p>A pentester assesses security across various levels of the information infrastructure, including web applications, networks, mobile apps, and cloud environments.</p>
+        <p>The role typically begins with analyzing the client’s requirements and defining test goals, such as verifying security compliance or identifying specific vulnerabilities.</p>
+        
+
+        <h2>Testing and Vulnerability Analysis</h2>
+        <img src="burpsuite.png" alt="Testing and Vulnerability Analysis - Attack Simulation">
+        <p>During the active testing phase, the pentester gathers information and identifies attack vectors using tools and techniques like port scanning, configuration checks, and vulnerability assessments.</p>
+        <p>Pentesters might simulate attacks (e.g., “Man-in-the-Middle”) and use social engineering to test security and expose weaknesses in employee awareness.</p>
+        
+
+        <h2>Reporting</h2>
+        <img src="report.png" alt="Reporting - Vulnerability Report">
+        <p>After discovering vulnerabilities, the pentester compiles a report detailing the issues, business risks, evidence, and recommendations. This report helps clients make informed security decisions.</p>
+        
+
+        <h2>Key Skills and Tools</h2>
+        <img src="wireshark.png" alt="Key Skills and Tools - Penetration Testing Software">
+        <p>Proficiency in tools like Kali Linux, Metasploit, Burp Suite, Nmap, and Wireshark is essential. Knowledge of scripting in Python or Bash is also valuable for automation.</p>
+        <p>The pentester must adhere to strict ethical standards, as their work impacts data security and client confidentiality.</p>
+        
+    </div>
+</div>
+
+<script>
+    // JavaScript to toggle the display of additional information
+    function toggleInfo() {
+        const info = document.querySelector('.additional-info');
+        const button = document.querySelector('.expand-btn');
+        if (info.style.display === 'none') {
+            info.style.display = 'block';
+            button.textContent = 'Read Less';
+        } else {
+            info.style.display = 'none';
+            button.textContent = 'Read More';
+        }
+    }
+</script>
+
+</body>
 </html>
-
